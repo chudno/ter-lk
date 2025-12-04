@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "prettier": "^3.7.1",
+    "prettier-plugin-css-order": "^2.1.2",
+    "sass": "^1.94.2"
+  },
+  "scripts": {
+    "watch": "sass --watch ."
+  },
+  "dependencies": {
+    "flexidatepicker": "^1.1.5"
+  }
+}

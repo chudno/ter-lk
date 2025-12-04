@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <img
+              class="header__logo-image"
+              src="./media/logo.svg"
+              alt=""
+              width="110"
+              height="40"
+              loading="lazy"
+            />
+          </a>
+          <div class="header__burger" data-js-overlay-menu>
+            <button
+              class="header__notification-button header__notification-button--mobile"
+              type="button"
+            >
+              <svg class="icon icon--bell" width="16" height="16">
+                <use href="./media/icons/sprite.svg#bell"></use>
+              </svg>
+              <!--              Удалить counter, если он не нужен, по макету небыло-->
+              <span class="header__notification-button-counter"> 5 </span>
+            </button>
+            <button
+              class="header__burger-button burger-button"
+              type="button"
+              aria-label="Open menu"
+              title="Open menu"
+              data-js-overlay-menu-burger-button
+            >
+              <div class="burger-button__inner">
+                <span class="burger-button__line burger-button__line--first">
+                </span>
+                <span class="burger-button__line burger-button__line--second">
+                </span>
+                <span class="burger-button__line burger-button__line--third">
+                </span>
+              </div>
+            </button>
+            <dialog class="burger-dialog" data-js-overlay-menu-dialog>
+              <div class="burger-dialog__inner">
+                <button class="burger-dialog__exit-button" type="button">
+                  Выйти
+                </button>
+                <nav class="header__menu-nav">
+                  <ul class="header__menu-list">
+                    <li class="header__menu-list-item">
+                      <a
+                        class="header__menu-list-link header__menu-list-link--active"
+                        href="#"
+                      >
+                        <svg class="icon icon--part" width="16" height="16">
+                          <use href="./media/icons/sprite.svg#part"></use>
+                        </svg>
+                        Аналитика
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <a class="header__menu-list-link" href="#">
+                        <svg class="icon icon--chain" width="16" height="16">
+                          <use href="./media/icons/sprite.svg#chain"></use>
+                        </svg>
+                        Постоянные ссылки
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <a class="header__menu-list-link" href="#">
+                        <svg class="icon icon--list" width="16" height="16">
+                          <use href="./media/icons/sprite.svg#list"></use>
+                        </svg>
+                        Счета
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <a class="header__menu-list-link" href="#">
+                        <svg class="icon icon--return" width="16" height="8">
+                          <use href="./media/icons/sprite.svg#return"></use>
+                        </svg>
+                        Реестр возвратов
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <div class="dropdown" data-js-dropdown>
+                        <button
+                          class="dropdown__trigger"
+                          data-js-dropdown-trigger
+                        >
+                          Выставить счет
+                          <svg
+                            class="icon icon--arrow-down"
+                            width="16"
+                            height="16"
+                          >
+                            <use
+                              href="./media/icons/sprite.svg#arrow-down"
+                            ></use>
+                          </svg>
+                        </button>
+                        <ul class="dropdown__menu" data-js-dropdown-menu>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="#">test 1</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="#">test 2</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="#">test 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <div class="dropdown" data-js-dropdown>
+                        <button
+                          class="dropdown__trigger"
+                          data-js-dropdown-trigger
+                        >
+                          Настройки
+                          <svg
+                            class="icon icon--arrow-down"
+                            width="16"
+                            height="16"
+                          >
+                            <use
+                              href="./media/icons/sprite.svg#arrow-down"
+                            ></use>
+                          </svg>
+                        </button>
+                        <ul class="dropdown__menu" data-js-dropdown-menu>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="/">test 1</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="/">test 2</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="/">test 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="header__person-block">
+                  <button class="header__notification-button" type="button">
+                    <svg class="icon icon--bell" width="16" height="16">
+                      <use href="./media/icons/sprite.svg#bell"></use>
+                    </svg>
+                    <!--              Удалить, если он не нужен, по макету небыло-->
+                    <span class="header__notification-button-counter"> 5 </span>
+                  </button>
+                  <div class="header__person-wrapper">
+                    <a class="header__person-cabinet-link" href="#">
+                      <span>T</span>
+                    </a>
+                    <p>User name</p>
+                  </div>
+                  <button
+                    class="burger-dialog__close"
+                    type="button"
+                    data-js-overlay-menu-close
+                  >
+                    <svg class="icon icon--cross" width="24" height="24">
+                      <use href="./media/icons/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="cooling container container--xs">
+        <div class="cooling__inner">
+          <a class="cooling__link-back" href="./index.html">
+            <svg class="icon icon--arrow-left" width="16" height="16">
+              <use href="./media/icons/sprite.svg#arrow-left"></use>
+            </svg>
+            Назад к аналитике
+          </a>
+          <div class="cooling__title-block">
+            <h1 class="cooling-title h1">Период охлаждения</h1>
+            <p class="cooling__subtitle">на охлаждении 350 000 ₽</p>
+          </div>
+          <div class="cooling__main" data-js-tabs>
+            <div class="cooling__main-header">
+              <button
+                class="cooling__tab-button cooling__tab-button--active is-active"
+                id="tab-1"
+                type="button"
+                role="tab"
+                aria-controls="tabpanel-1"
+                data-js-tabs-button
+                aria-selected="true"
+              >
+                <p class="cooling__tab-button-text">На охлаждении</p>
+                <span class="cooling__tab-button-quantity">
+                  <p>3</p>
+                </span>
+              </button>
+              <button
+                class="cooling__tab-button cooling__tab-button--passed-cooling"
+                id="tab-2"
+                type="button"
+                role="tab"
+                aria-controls="tabpanel-2"
+                data-js-tabs-button
+                aria-selected="true"
+              >
+                <p class="cooling__tab-button-text">Прошли охлаждение</p>
+                <span class="cooling__tab-button-quantity">
+                  <p>1</p>
+                </span>
+              </button>
+              <button
+                class="cooling__tab-button cooling__tab-button--refused"
+                id="tab-3"
+                type="button"
+                role="tab"
+                aria-controls="tabpanel-3"
+                data-js-tabs-button
+                aria-selected="true"
+              >
+                <p class="cooling__tab-button-text">отказались</p>
+                <span class="cooling__tab-button-quantity">
+                  <p>1</p>
+                </span>
+              </button>
+            </div>
+            <div class="cooling__main-actions">
+              <div class="cooling__input input" data-js-search>
+                <input
+                  class="input__field"
+                  type="text"
+                  placeholder="Поиск по ФИО, телефону или почте"
+                  data-js-search-input
+                />
+                <button
+                  class="input__icon is-search"
+                  type="button"
+                  data-js-search-icon
+                >
+                  <svg class="icon icon--search" width="16" height="16">
+                    <use href="./media/icons/sprite.svg#search"></use>
+                  </svg>
+                  <svg class="icon icon--cross" width="16" height="16">
+                    <use href="./media/icons/sprite.svg#cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="cooling__main-body is-active"
+              id="tabpanel-1"
+              aria-labelledby="tab-1"
+              tabindex="0"
+              data-js-tabs-content
+            >
+              <div class="cooling__deal-card deal-card">
+                <div class="deal-card__info">
+                  <p class="deal-card__name">Иванова Анастасия</p>
+                  <div class="deal-card__details">
+                    <button class="deal-card__details-copy-button" data-js-copy>
+                      +7 900 234-32-11
+                    </button>
+                    <button class="deal-card__details-copy-button" data-js-copy>
+                      i.anastasiya@gmail.com
+                    </button>
+                    <span>Одобрено 22 окт в 08:25</span>
+                    <span>150 000 ₽ </span>
+                  </div>
+                </div>
+                <div class="deal-card__timer" data-js-countdown>
+                  <div class="deal-card__progress">
+                    <div
+                      class="deal-card__progress-bar"
+                      data-js-countdown-progress
+                      data-start-date="2025-12-04T13:00:00"
+                      data-end-date="2025-12-04T13:50:00"
+                    >
+                      <div
+                        class="deal-card__progress-bar-item"
+                        data-js-countdown-progress-item
+                      ></div>
+                    </div>
+                    <div class="deal-card__progress-footer">
+                      <p
+                        class="deal-card__progress-time"
+                        data-js-countdown-start-text
+                      >
+                        осталось 3 ч 59 мин <br />
+                      </p>
+                      <p data-js-countdown-end-text>
+                        дата окончания 22 окт 12:25
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="deal-card__copy-to-clipboard"
+                    type="button"
+                    title="Скопировать номер"
+                    data-js-copy
+                    data-copy-value="+7 900 234-32-11"
+                  >
+                    <svg class="icon icon--copy" width="16" height="16">
+                      <use href="./media/icons/sprite.svg#copy"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!--              <div class="cooling__deal-card deal-card">-->
+              <!--                <div class="deal-card__info">-->
+              <!--                  <p class="deal-card__name">Иванова Анастасия</p>-->
+              <!--                  <div class="deal-card__details">-->
+              <!--                    <button class="deal-card__details-copy-button" data-js-copy>-->
+              <!--                      +7 900 234-32-11-->
+              <!--                    </button>-->
+              <!--                    <button class="deal-card__details-copy-button" data-js-copy>-->
+              <!--                      i.anastasiya@gmail.com-->
+              <!--                    </button>-->
+              <!--                    <span>Одобрено 22 окт в 08:25</span>-->
+              <!--                    <span>150 000 ₽ </span>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+              <!--                <div-->
+              <!--                  class="deal-card__timer"-->
+              <!--                  data-js-countdown-->
+              <!--                  data-start-date="2025-12-03T10:00:00"-->
+              <!--                  data-end-date="2025-12-04T20:00:00"-->
+              <!--                >-->
+              <!--                  <div class="deal-card__progress">-->
+              <!--                    <div-->
+              <!--                      class="deal-card__progress-bar"-->
+              <!--                      data-js-countdown-progress-->
+              <!--                    >-->
+              <!--                      <div-->
+              <!--                        class="deal-card__progress-bar-item"-->
+              <!--                        data-js-countdown-progress-item-->
+              <!--                      ></div>-->
+              <!--                    </div>-->
+              <!--                    <div class="deal-card__progress-footer">-->
+              <!--                      <p-->
+              <!--                        class="deal-card__progress-time"-->
+              <!--                        data-js-countdown-time-->
+              <!--                      >-->
+              <!--                        осталось 3 ч 59 мин <br />-->
+              <!--                      </p>-->
+              <!--                      <p data-js-countdown-end-text>-->
+              <!--                        дата окончания 22 окт 12:25-->
+              <!--                      </p>-->
+              <!--                    </div>-->
+              <!--                  </div>-->
+              <!--                  <button-->
+              <!--                    class="deal-card__copy-to-clipboard"-->
+              <!--                    type="button"-->
+              <!--                    title="Скопировать номер"-->
+              <!--                    data-js-copy-->
+              <!--                    data-copy-value="+7 900 234-32-11"-->
+              <!--                  >-->
+              <!--                    <svg class="icon icon&#45;&#45;copy" width="16" height="16">-->
+              <!--                      <use href="./media/icons/sprite.svg#copy"></use>-->
+              <!--                    </svg>-->
+              <!--                  </button>-->
+              <!--                </div>-->
+              <!--              </div>-->
+              <!--              <div class="cooling__deal-card deal-card">-->
+              <!--                <div class="deal-card__info">-->
+              <!--                  <p class="deal-card__name">Иванова Анастасия</p>-->
+              <!--                  <div class="deal-card__details">-->
+              <!--                    <button class="deal-card__details-copy-button" data-js-copy>-->
+              <!--                      +7 900 234-32-11-->
+              <!--                    </button>-->
+              <!--                    <button class="deal-card__details-copy-button" data-js-copy>-->
+              <!--                      i.anastasiya@gmail.com-->
+              <!--                    </button>-->
+              <!--                    <span>Одобрено 22 окт в 08:25</span>-->
+              <!--                    <span>150 000 ₽ </span>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+              <!--                <div-->
+              <!--                  class="deal-card__timer"-->
+              <!--                  data-js-countdown-->
+              <!--                  data-start-date="2025-12-01T10:00:00"-->
+              <!--                  data-end-date="2025-12-04T20:00:00"-->
+              <!--                >-->
+              <!--                  <div class="deal-card__progress">-->
+              <!--                    <div-->
+              <!--                      class="deal-card__progress-bar"-->
+              <!--                      data-js-countdown-progress-->
+              <!--                    >-->
+              <!--                      <div-->
+              <!--                        class="deal-card__progress-bar-item"-->
+              <!--                        data-js-countdown-progress-item-->
+              <!--                      ></div>-->
+              <!--                    </div>-->
+              <!--                    <div class="deal-card__progress-footer">-->
+              <!--                      <p class="deal-card__progress-time" data-js-countdown-start-text>-->
+              <!--                        осталось 3 ч 59 мин <br />-->
+              <!--                      </p>-->
+              <!--                      <p data-js-countdown-end-text>-->
+              <!--                        дата окончания 22 окт 12:25-->
+              <!--                      </p>-->
+              <!--                    </div>-->
+              <!--                  </div>-->
+              <!--                  <button-->
+              <!--                    class="deal-card__copy-to-clipboard"-->
+              <!--                    type="button"-->
+              <!--                    title="Скопировать номер"-->
+              <!--                    data-js-copy-->
+              <!--                    data-copy-value="+7 900 234-32-11"-->
+              <!--                  >-->
+              <!--                    <svg class="icon icon&#45;&#45;copy" width="16" height="16">-->
+              <!--                      <use href="./media/icons/sprite.svg#copy"></use>-->
+              <!--                    </svg>-->
+              <!--                  </button>-->
+              <!--                </div>-->
+              <!--              </div>-->
+            </div>
+            <!--            <div-->
+            <!--              class="cooling__main-body"-->
+            <!--              id="tabpanel-2"-->
+            <!--              aria-labelledby="tab-2"-->
+            <!--              tabindex="0"-->
+            <!--              data-js-tabs-content-->
+            <!--            >-->
+            <!--              <div class="cooling__deal-card deal-card">-->
+            <!--                <div class="deal-card__info">-->
+            <!--                  <p class="deal-card__name">Иванов Алексей Андреевич</p>-->
+            <!--                  <div class="deal-card__details">-->
+            <!--                    <span>+7 900 211-30-11</span>-->
+            <!--                    <span>aalex@gmail.com</span>-->
+            <!--                    <span>Одобрено 22 окт в 08:25</span>-->
+            <!--                    <span>250 000 ₽</span>-->
+            <!--                  </div>-->
+            <!--                </div>-->
+            <!--                <div-->
+            <!--                  class="deal-card__timer"-->
+            <!--                  data-js-countdown-->
+            <!--                  data-start-date="2025-12-01T10:00:00"-->
+            <!--                  data-end-date="2025-12-04T20:00:00"-->
+            <!--                >-->
+            <!--                  <div class="deal-card__progress">-->
+            <!--                    <div-->
+            <!--                      class="deal-card__progress-bar"-->
+            <!--                      data-js-countdown-progress-->
+            <!--                    >-->
+            <!--                      <div-->
+            <!--                        class="deal-card__progress-bar-item"-->
+            <!--                        data-js-countdown-progress-item-->
+            <!--                      ></div>-->
+            <!--                    </div>-->
+            <!--                    <div class="deal-card__progress-footer">-->
+            <!--                      <p class="deal-card__progress-time" data-js-countdown-start-text>-->
+            <!--                        осталось 3 ч 59 мин <br />-->
+            <!--                      </p>-->
+            <!--                      <p data-js-countdown-end-text>-->
+            <!--                        дата окончания 22 окт 12:25-->
+            <!--                      </p>-->
+            <!--                    </div>-->
+            <!--                  </div>-->
+            <!--                  <button-->
+            <!--                    class="deal-card__copy-to-clipboard"-->
+            <!--                    type="button"-->
+            <!--                    title="Скопировать номер"-->
+            <!--                    data-js-copy-->
+            <!--                    data-copy-value="+7 900 234-32-11"-->
+            <!--                  >-->
+            <!--                    <svg class="icon icon&#45;&#45;copy" width="16" height="16">-->
+            <!--                      <use href="./media/icons/sprite.svg#copy"></use>-->
+            <!--                    </svg>-->
+            <!--                  </button>-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            <div-->
+            <!--              class="cooling__main-body"-->
+            <!--              id="tabpanel-3"-->
+            <!--              aria-labelledby="tab-3"-->
+            <!--              tabindex="0"-->
+            <!--              data-js-tabs-content-->
+            <!--            >-->
+            <!--              <div class="cooling__deal-card deal-card">-->
+            <!--                <div class="deal-card__info">-->
+            <!--                  <p class="deal-card__name">Владислав</p>-->
+            <!--                  <div class="deal-card__details">-->
+            <!--                    <span>+7 963 125-28-10</span>-->
+            <!--                    <span>vladd@gmail.com</span>-->
+            <!--                    <span>Одобрено 22 окт в 08:25</span>-->
+            <!--                    <span>1 250 000 ₽</span>-->
+            <!--                  </div>-->
+            <!--                </div>-->
+            <!--                <div class="deal-card__timer" data-js-countdown>-->
+            <!--                  <div class="deal-card__progress">-->
+            <!--                    <div-->
+            <!--                      class="deal-card__progress-bar"-->
+            <!--                      data-start-date="2025-11-10T10:00:00"-->
+            <!--                      data-end-date="2025-12-10T20:00:00"-->
+            <!--                      data-js-countdown-progress-->
+            <!--                    >-->
+            <!--                      <div-->
+            <!--                        class="deal-card__progress-bar-item"-->
+            <!--                        data-js-countdown-progress-item-->
+            <!--                      ></div>-->
+            <!--                    </div>-->
+            <!--                    <div class="deal-card__progress-footer">-->
+            <!--                      <p class="deal-card__progress-time" data-js-countdown-start-text>-->
+            <!--                        осталось 3 ч 59 мин <br />-->
+            <!--                      </p>-->
+            <!--                      <p data-js-countdown-end-text>-->
+            <!--                        дата окончания 22 окт 12:25-->
+            <!--                      </p>-->
+            <!--                    </div>-->
+            <!--                  </div>-->
+            <!--                  <button-->
+            <!--                    class="deal-card__copy-to-clipboard"-->
+            <!--                    type="button"-->
+            <!--                    title="Скопировать номер"-->
+            <!--                    data-js-copy-->
+            <!--                    data-copy-value="+7 900 234-32-11"-->
+            <!--                  >-->
+            <!--                    <svg class="icon icon&#45;&#45;copy" width="16" height="16">-->
+            <!--                      <use href="./media/icons/sprite.svg#copy"></use>-->
+            <!--                    </svg>-->
+            <!--                  </button>-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            Спрятанный блок, если ничего не найдено-->
+            <div class="cooling__main-body cooling__main-body--nothing-found">
+              <p class="cooling__nothing-found-text">Ничего не найдено</p>
+              <p>Попробуйте изменить запрос</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+:root {
+  /* --- Светлая тема --- */
+  --color-accent: #f2ff54;
+
+  --color-bg: #f7f9fc;
+
+  --color-text-main: #060606;
+  --color-text-number: #21221f;
+
+  --color-title-request: #060606;
+  --color-title-method: #060606;
+  --color-title-under-consideration: #060606;
+  --color-title-approval: #060606;
+  --color-title-signed: #060606;
+
+  --color-page-active-mobile: #675def;
+
+  --color-bg-card: #ffffff;
+
+  --color-icon-therm-1: #675def;
+  --color-icon-therm-2: #675def;
+  --color-icon-therm-3: #675def;
+
+  --color-icon-banknote-1: #675def;
+  --color-icon-banknote-2: #675def;
+
+  --color-title-additional: #675def;
+
+  --color-funnel-col: #eef2f8;
+
+  --color-add-button: #334155;
+
+  --color-date: #21221f;
+
+  --color-client-name: #060606;
+  --color-client-mobile: #21221f;
+  --color-client-amount: #21221f;
+
+  --color-label-sber: #21a037;
+  --color-label-otp: #c1ff0b;
+  --color-label-credit-europa: #f33;
+  --color-label-tbank: #ffdd2d;
+  --color-label-sovcom-express: #003790;
+  --color-label-mig: #32e17d;
+  --color-label-mtc: #e30611;
+  --color-label-alfa: #ea2119;
+  --color-label-loco: #1e60fc;
+  --color-label-kviku: #047eef;
+  --color-label-home-express: #cf3438;
+  --color-label-sovcom-bank: #003790;
+  --color-label-paylate: #eb3b66;
+
+  --color-label-sber-text: #fff;
+  --color-label-otp-text: #000;
+  --color-label-credit-europa-text: #fff;
+  --color-label-tbank-text: #333;
+  --color-label-sovcom-express-text: #fff;
+  --color-label-mig-text: #000;
+  --color-label-mtc-text: #fff;
+  --color-label-alfa-text: #fff;
+  --color-label-loco-text: #fff;
+  --color-label-kviku-text: #fff;
+  --color-label-home-express-text: #fff;
+  --color-label-sovcom-bank-text: #fff;
+  --color-label-paylate-text: #fff;
+
+  --color-link-back: #262626;
+
+  --color-cooling-subtitle: #675def;
+  --color-cooling-border: #d7dee9;
+  --color-cooling-border-tab-active: #0f172a;
+  --color-cooling-tab: #64748b;
+  --color-cooling-tab-quantity: linear-gradient(90deg, #f2ff54 0%, #fffffc 100%);
+  --color-cooling-tab-quantity-refused: #f7f9fc;
+
+  --color-deal-card-bg: #fff;
+  --color-deal-card: #0f172a;
+  --color-deal-card-label: #334155;
+  --color-deal-card-label-bg: #eef2f8;
+  --color-deal-card-progress-bar: #edf2f7;
+  --color-deal-card-progress-bar-active: #675def;
+  --color-deal-card-copy: var(--color-yellow-80);
+  --color-deal-card-copy-hover: var(--color-yellow);
+
+  --color-nothing-found: var(--color-black-40);
+  --color-nothing-found-additional: #242424;
+
+  --color-input-bg: transparent;
+  --color-input-focus: #737373;
+
+  --color-graphic-procent: #060606;
+  --opacity-graphic-procent: 0.5;
+  --graphic-bg: url('../media/graphic-bg.svg');
+  --color-chart-procent-bar-mobile: #050505;
+  --color-chart-procent-bar-mobile-alt: #fff;
+
+  --color-icon-search: var(--color-black-10);
+  --color-icon-cross: #8c8c8c;
+
+  --color-burger-border: #d7dee9;
+  --color-burger-link: #262626;
+  --color-exit-button: #262626;
+  --color-border-exit-button: #d7dee9;
+
+  --color-label-bar: #060606;
+  --color-bg-label-bar: var(--color-accent);
+
+  --color-chart-statistic-procent: var(--color-black-06);
+
+  --color-line-chart: #d7dee9;
+
+  --color-download-button-border: #d7dee9;
+  --color-download-button: rgba(15, 23, 42, 0.7);
+
+  --color-chart-procent: #675def;
+
+  --color-chart-stats-mobile: #eef2f8;
+
+  --color-chart-procent-text: #675def;
+  --color-chart-procent-text-alt: #060606;
+  --color-chart-procent-additional: #262626;
+
+  --color-bar-first: #21221f;
+  --color-bar-second: #808080;
+  --color-bar-third: #675def;
+  --color-bar-fourth: #eac221;
+  --color-bar-fourth-mobile: #eac221;
+  --color-bar-five: #ffdd2d;
+  --color-bar-mobile-text-second: #060606;
+
+  --color-bar-first-shadow: linear-gradient(180deg, rgba(33, 34, 31, 0.12) 0%, rgba(33, 34, 31, 0.02) 100%);
+  --color-bar-second-shadow: linear-gradient(180deg, rgba(128, 128, 128, 0.12) 0%, rgba(128, 128, 128, 0.02) 100%);
+  --color-bar-third-shadow: linear-gradient(180deg, rgba(103, 93, 239, 0.2) 0%, rgba(103, 93, 239, 0.02) 100%);
+  --color-bar-fourth-shadow: linear-gradient(180deg, rgba(234, 194, 33, 0.2) 0%, rgba(234, 194, 33, 0.02) 100%);
+
+  --color-text-tooltip: #8c8c8c;
+  --color-bg-tooltip: #fff;
+
+  --color-bg-analitycs: #fff;
+
+  --color-analitycs-subtitle: #060606;
+
+  --color-conversion-text: #060606;
+  --color-chart-count: #060606;
+  --color-chat-labels: #060606;
+
+  --color-status-card: #fff;
+  --color-text-status-card: #060606;
+  --color-text-additional-status-card: #1d1e1a;
+
+  --color-input-border: #d7dee9;
+
+  --color-add-bid: #fff;
+
+  --color-approval-mobile: #262626;
+
+  --color-bg-dialog: #fff;
+
+  --color-profile-name: #262626;
+
+  --color-bg-deal-card: #fff;
+
+  --color-label-cooling-copy: #334155;
+
+  --color-progress-text: #334155;
+
+  --color-main-title: #060606;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-white-06: #fffffc;
+
+  --color-black-06: #060606;
+  --color-black-09: #1d1e1a;
+  --color-black-10: #1e1e1e;
+  --color-black-20: #1c1d19;
+  --color-black-30: #262626;
+  --color-black-40: #0f172a;
+
+  --color-gray-10: #eef2f8;
+  --color-gray-20: #d7dee9;
+  --color-gray-60: #64748b;
+  --color-gray-70: #334155;
+  --color-gray-90: #21221f;
+
+  --color-violet: #675def;
+
+  --color-yellow: #ff0;
+  --color-yellow-80: #f4f50a;
+
+  --color-border: #f7f9fc;
+
+  --font-family-base: 'GraphikLCWeb', sans-serif;
+
+  --border: 1px solid var(--color-border);
+
+  --rouneded-xxl: 20px;
+  --rounded-xl: 16px;
+  --rounded-l: 12px;
+  --rounded-m: 8px;
+  --rounded-s: 4px;
+  --rounded-sm: 3px;
+
+  --box-shadow-base: 0 1px 2px 0 rgba(15, 23, 42, 0.06), 0 10px 24px 0 rgba(15, 23, 42, 0.1);
+
+  --opacity-mobile: 0.65;
+
+  --container-width: 1440px;
+  --container-sm-width: 1280px;
+  --container-xs-width: 774px;
+  --container-padding-x: 30px;
+
+  --bar-width: 64px;
+
+  --mini-bar-height: 60px;
+  --mini-bars-padding-Y: 10px;
+
+  --transition-duration: 0.2s;
+
+  --color-graphic-procent-bar: #060606;
+
+  /* --- Темная тема --- */
+  [data-theme='dark'] {
+    --color-bg: #060606;
+
+    --color-text-main: #ffffff;
+    --color-text-number: #f7f7f7;
+
+    --color-border: #f7f9fc;
+
+    --color-bg-card: linear-gradient(180deg, var(--color-black-20) 0%, var(--color-black-30) 100%);
+
+    --color-title-request: #f7f7f7;
+    --color-title-method: #ffffff;
+    --color-title-under-consideration: #d6d3ff;
+    --color-title-approval: linear-gradient(90deg, var(--color-accent) 0%, var(--color-white-06) 100%);
+    --color-title-signed: var(--color-accent);
+
+    --color-page-active-mobile: #f2ff54;
+
+    --color-icon-therm-1: #d6d3ff;
+    --color-icon-therm-2: #f2ff54;
+    --color-icon-therm-3: #fffffc;
+
+    --color-icon-banknote-1: #d6d3ff;
+    --color-icon-banknote-2: #fffffc;
+
+    --color-funnel-col: #303030;
+
+    --color-add-button: #fff;
+
+    --color-date: #f7f7f7;
+
+    --color-client-name: #fff;
+    --color-client-mobile: #f7f7f7;
+    --color-client-amount: #f7f7f7;
+
+    --color-label-sber: #363636;
+    --color-label-otp: #363636;
+    --color-label-credit-europa: #363636;
+    --color-label-tbank: #363636;
+    --color-label-sovcom-express: #363636;
+    --color-label-mig: #363636;
+    --color-label-mtc: #363636;
+    --color-label-alfa: #363636;
+    --color-label-loco: #363636;
+    --color-label-kviku: #363636;
+    --color-label-home-express: #363636;
+    --color-label-sovcom-bank: #363636;
+    --color-label-paylate: #363636;
+
+    --color-label-sber-text: #d9ffdf;
+    --color-label-otp-text: #f5ffd9;
+    --color-label-credit-europa-text: #f5ffd9;
+    --color-label-tbank-text: #fff5bf;
+    --color-label-sovcom-express-text: #bfd8ff;
+    --color-label-mig-text: #9de1ba;
+    --color-label-mtc-text: #e39498;
+    --color-label-alfa-text: #ea908c;
+    --color-label-loco-text: #b0c7fc;
+    --color-label-kviku-text: #a7cdef;
+    --color-label-home-express-text: #e58a8c;
+    --color-label-sovcom-bank-text: #bfd8ff;
+    --color-label-paylate-text: #eb99ad;
+
+    --color-link-back: #f7f7f7;
+
+    --color-cooling-subtitle: #d6d3ff;
+    --color-cooling-border: #353535;
+    --color-cooling-border-tab-active: var(--color-accent);
+    --color-cooling-tab: #fff;
+    --color-cooling-tab-quantity: #060606;
+    --color-cooling-tab-quantity-refused: #f7f7f7;
+
+    --color-deal-card-bg: linear-gradient(180deg, #1c1d19 0%, #262626 100%);
+    --color-deal-card: linear-gradient(90deg, #f2ff54 0%, #fffffc 100%);
+    --color-deal-card-label: #f7f7f7;
+    --color-deal-card-label-bg: #141414;
+    --color-deal-card-progress-bar: #060606;
+    --color-deal-card-progress-bar-active: #d6d3ff;
+
+    --color-deal-card-copy: var(--color-accent);
+    --color-deal-card-copy-hover: #f8ff9d;
+
+    --color-nothing-found: var(--color-text-number);
+    --color-nothing-found-additional: var(--color-text-number);
+
+    --color-input-bg: var(--color-black-09);
+    --color-input-focus: #aaa;
+
+    --color-icon-search: var(--color-white);
+
+    --color-graphic-procent: #f7f7f7;
+    --opacity-graphic-procent: 0.7;
+    --graphic-bg: url('../media/graphic-bg-alt.svg');
+
+    --color-burger-border: #353535;
+    --color-burger-link: #fff;
+    --color-exit-button: rgba(255, 255, 255, 0.85);
+    --color-border-exit-button: #525252;
+
+    --color-label-bar: #f7f7f7;
+    --color-bg-label-bar: #060606;
+
+    --color-chart-statistic-procent: var(--color-accent);
+
+    --color-line-chart: #424242;
+
+    --color-download-button-border: #353535;
+    --color-download-button: #f7f7f7;
+
+    --color-chart-procent: #d6d3ff;
+
+    --color-chart-stats-mobile: #2f2f2f;
+
+    --color-chart-procent-text: #d6d3ff;
+    --color-chart-procent-text-alt: var(--color-accent);
+    --color-chart-procent-additional: #f7f7f7;
+
+    --color-bar-first: #f7f7f7;
+    --color-bar-second: #bdbdbd;
+    --color-bar-third: #d6d3ff;
+    --color-bar-fourth: linear-gradient(90deg, #fffffc 0%, #f2ff54 100%);
+    --color-bar-fourth-mobile: linear-gradient(90deg, #f2ff54 0%, #fffffc 100%);
+    --color-bar-five: var(--color-accent);
+
+    --color-bar-first-shadow: linear-gradient(180deg, rgba(247, 247, 247, 0.12) 0%, rgba(247, 247, 247, 0.02) 100%);
+    --color-bar-second-shadow: linear-gradient(180deg, rgba(189, 189, 189, 0.12) 0%, rgba(189, 189, 189, 0.02) 100%);
+    --color-bar-third-shadow: linear-gradient(180deg, rgba(214, 211, 255, 0.15) 0%, rgba(214, 211, 255, 0.02) 100%);
+    --color-bar-fourth-shadow: linear-gradient(180deg, rgba(242, 255, 84, 0.15) 0%, rgba(242, 255, 84, 0.02) 100%);
+
+    --color-chart-procent-bar-mobile: #060606;
+    --color-chart-procent-bar-mobile-alt: #060606;
+
+    --color-text-tooltip: #fff;
+    --color-bg-tooltip: #4f4f4f;
+
+    --color-bg-analitycs: linear-gradient(180deg, #1c1d19 0%, #262626 100%);
+
+    --color-analitycs-subtitle: #f7f7f7;
+
+    --color-conversion-text: #f7f7f7;
+    --color-chart-count: #f7f7f7;
+    --color-chat-labels: #fff;
+
+    --color-status-card: var(--color-bg-analitycs);
+    --color-text-status-card: #f7f7f7;
+    --color-text-additional-status-card: #f7f7f7;
+
+    --color-input-border: #353535;
+
+    --color-add-bid: linear-gradient(180deg, #1c1d19 0%, #262626 100%);
+
+    --color-approval-mobile: #f7f7f7;
+
+    --color-bg-dialog: #1e1e1e;
+
+    --color-profile-name: #fff;
+
+    --color-bg-deal-card: linear-gradient(180deg, #1c1d19 0%, #262626 100%);
+
+    --color-label-cooling-copy: #f7f7f7;
+
+    --color-progress-text: #f7f7f7;
+
+    --color-bar-mobile-text-second: #fff;
+
+    --color-main-title: #fff;
+  }
+}

@@ -1,0 +1,68 @@
+@use '../helpers' as *;
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  &__trigger {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    color: var(--color-white);
+    font-size: 14px;
+    line-height: 1.5;
+
+    @include reset-button;
+
+    @include tablet {
+      color: var(--color-burger-link);
+    }
+
+    &.is-active {
+      opacity: 0.65;
+
+      .icon {
+        rotate: 180deg;
+        transition-duration: var(--transition-duration);
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 20;
+    transition-behavior: allow-discrete;
+    transition-duration: var(--transition-duration);
+    box-shadow: var(--box-shadow-base);
+    border-radius: var(--rounded-m);
+    background: white;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__menu.is-open {
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
+  &__item {
+    display: block;
+    opacity: 0.65;
+    padding: 8px 14px;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+
+    @include hover {
+      opacity: 1;
+      transition-duration: var(--transition-duration);
+    }
+  }
+}

@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script
+      src="./vendor/flexi-datepicker/flexidatepicker.umd.min.js"
+      defer
+    ></script>
+    <script src="./scripts/main.js" type="module" defer></script>
+    <script src="./scripts/chart.js" type="module" defer></script>
+    <script src="./scripts/chartMobile.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <img
+              class="header__logo-image"
+              src="./media/logo.svg"
+              alt=""
+              width="110"
+              height="40"
+              loading="lazy"
+            />
+          </a>
+          <div class="header__burger" data-js-overlay-menu>
+            <button
+              class="header__notification-button header__notification-button--mobile"
+              type="button"
+            >
+              <svg class="icon icon--bell" width="16" height="16">
+                <use href="./media/icons/sprite.svg#bell"></use>
+              </svg>
+              <!--              Удалить counter, если он не нужен, по макету небыло-->
+              <span class="header__notification-button-counter"> 5 </span>
+            </button>
+            <button
+              class="header__burger-button burger-button"
+              type="button"
+              aria-label="Open menu"
+              title="Open menu"
+              data-js-overlay-menu-burger-button
+            >
+              <div class="burger-button__inner">
+                <span class="burger-button__line burger-button__line--first">
+                </span>
+                <span class="burger-button__line burger-button__line--second">
+                </span>
+                <span class="burger-button__line burger-button__line--third">
+                </span>
+              </div>
+            </button>
+            <dialog class="burger-dialog" data-js-overlay-menu-dialog>
+              <div class="burger-dialog__inner">
+                <button class="burger-dialog__exit-button" type="button">
+                  Выйти
+                </button>
+                <nav class="header__menu-nav">
+                  <ul class="header__menu-list">
+                    <li class="header__menu-list-item">
+                      <a
+                        class="header__menu-list-link header__menu-list-link--active"
+                        href="#"
+                      >
+                        <svg class="icon icon--part" width="16" height="16">
+                          <use href="./media/icons/sprite.svg#part"></use>
+                        </svg>
+                        Аналитика
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <a class="header__menu-list-link" href="#">
+                        <svg class="icon icon--chain" width="16" height="16">
+                          <use href="./media/icons/sprite.svg#chain"></use>
+                        </svg>
+                        Постоянные ссылки
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <a class="header__menu-list-link" href="#">
+                        <svg class="icon icon--list" width="16" height="16">
+                          <use href="./media/icons/sprite.svg#list"></use>
+                        </svg>
+                        Счета
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <a class="header__menu-list-link" href="#">
+                        <svg class="icon icon--return" width="16" height="8">
+                          <use href="./media/icons/sprite.svg#return"></use>
+                        </svg>
+                        Реестр возвратов
+                      </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <div class="dropdown" data-js-dropdown>
+                        <button
+                          class="dropdown__trigger"
+                          data-js-dropdown-trigger
+                        >
+                          Выставить счет
+                          <svg
+                            class="icon icon--arrow-down"
+                            width="16"
+                            height="16"
+                          >
+                            <use
+                              href="./media/icons/sprite.svg#arrow-down"
+                            ></use>
+                          </svg>
+                        </button>
+                        <ul class="dropdown__menu" data-js-dropdown-menu>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="#">test 1</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="#">test 2</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="#">test 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="header__menu-list-item">
+                      <div class="dropdown" data-js-dropdown>
+                        <button
+                          class="dropdown__trigger"
+                          data-js-dropdown-trigger
+                        >
+                          Настройки
+                          <svg
+                            class="icon icon--arrow-down"
+                            width="16"
+                            height="16"
+                          >
+                            <use
+                              href="./media/icons/sprite.svg#arrow-down"
+                            ></use>
+                          </svg>
+                        </button>
+                        <ul class="dropdown__menu" data-js-dropdown-menu>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="/">test 1</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="/">test 2</a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a class="dropdown__link" href="/">test 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="header__person-block">
+                  <button class="header__notification-button" type="button">
+                    <svg class="icon icon--bell" width="16" height="16">
+                      <use href="./media/icons/sprite.svg#bell"></use>
+                    </svg>
+                    <!--              Удалить, если он не нужен, по макету небыло-->
+                    <span class="header__notification-button-counter"> 5 </span>
+                  </button>
+                  <div class="header__person-wrapper">
+                    <a class="header__person-cabinet-link" href="#">
+                      <span>T</span>
+                    </a>
+                    <p>User name</p>
+                  </div>
+                  <button
+                    class="burger-dialog__close"
+                    type="button"
+                    data-js-overlay-menu-close
+                  >
+                    <svg class="icon icon--cross" width="24" height="24">
+                      <use href="./media/icons/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="analytics">
+        <div class="container container--sm container--contents">
+          <div class="analytics__header">
+            <div class="analytics__header-inner">
+              <h1 class="analytics__title">Аналитика</h1>
+              <div class="analytics__header-actions">
+                <a class="analytics__header-link" href="#">
+                  <div
+                    class="analytics__header-status-card analytics__header-status-card--alt"
+                  >
+                    <svg
+                      width="28"
+                      height="32"
+                      viewBox="0 0 28 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 25C9.99971 25.5499 9.84827 26.0892 9.56222 26.5589C9.27618 27.0286 8.86653 27.4106 8.37806 27.6632C7.88958 27.9158 7.34106 28.0293 6.79245 27.9912C6.24384 27.9532 5.71624 27.7651 5.26731 27.4475C4.81838 27.1298 4.46539 26.6949 4.24691 26.1903C4.02843 25.6856 3.95288 25.1306 4.0285 24.5859C4.10413 24.0412 4.32802 23.5277 4.67571 23.1017C5.02341 22.6756 5.48152 22.3533 6 22.17V19C6 18.7348 6.10536 18.4804 6.29289 18.2929C6.48043 18.1054 6.73478 18 7 18C7.26522 18 7.51957 18.1054 7.70711 18.2929C7.89464 18.4804 8 18.7348 8 19V22.17C8.58516 22.3769 9.09174 22.7602 9.44994 23.267C9.80815 23.7739 10.0003 24.3793 10 25Z"
+                        fill="var(--color-icon-therm-1)"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M2 5C2 3.67392 2.52679 2.40215 3.46447 1.46447C4.40215 0.526784 5.67392 0 7 0C8.32609 0 9.59786 0.526784 10.5355 1.46447C11.4732 2.40215 12 3.67392 12 5V20.1C12.9647 21.0846 13.6172 22.332 13.8758 23.6859C14.1343 25.0399 13.9874 26.44 13.4534 27.7107C12.9194 28.9815 12.0222 30.0663 10.8741 30.8292C9.7261 31.592 8.37839 31.999 7 31.999C5.62162 31.999 4.27391 31.592 3.12587 30.8292C1.97784 30.0663 1.08058 28.9815 0.546599 27.7107C0.0126227 26.44 -0.134299 25.0399 0.124256 23.6859C0.382811 22.332 1.03533 21.0846 2 20.1V5ZM7 2C6.20435 2 5.44129 2.31607 4.87868 2.87868C4.31607 3.44129 4 4.20435 4 5V20.974L3.666 21.274C2.91115 21.949 2.37906 22.8374 2.14015 23.8215C1.90123 24.8055 1.96676 25.839 2.32806 26.785C2.68936 27.731 3.3294 28.545 4.16347 29.1193C4.99755 29.6936 5.98634 30.0011 6.999 30.0011C8.01167 30.0011 9.00046 29.6936 9.83454 29.1193C10.6686 28.545 11.3086 27.731 11.6699 26.785C12.0312 25.839 12.0968 24.8055 11.8579 23.8215C11.6189 22.8374 11.0869 21.949 10.332 21.274L10 20.972V5C10 4.20435 9.68393 3.44129 9.12132 2.87868C8.55872 2.31607 7.79565 2 7 2ZM17 4C17.2652 4 17.5196 4.10536 17.7071 4.29289C17.8946 4.48043 18 4.73478 18 5V7.586L19.292 6.292C19.4798 6.10423 19.7345 5.99874 20 5.99874C20.2656 5.99874 20.5202 6.10423 20.708 6.292C20.8958 6.47977 21.0013 6.73445 21.0013 7C21.0013 7.26555 20.8958 7.52023 20.708 7.708L18 10.414V14.268L21.338 12.342L22.328 8.642C22.3621 8.51514 22.4209 8.39625 22.501 8.29212C22.5811 8.18798 22.6809 8.10065 22.7948 8.03509C22.9086 7.96953 23.0343 7.92704 23.1645 7.91003C23.2948 7.89303 23.4271 7.90186 23.554 7.936C23.6809 7.97014 23.7998 8.02894 23.9039 8.10903C24.008 8.18912 24.0954 8.28894 24.1609 8.40278C24.2265 8.51663 24.269 8.64227 24.286 8.77254C24.303 8.9028 24.2941 9.03514 24.26 9.162L23.786 10.926L26.026 9.634C26.2556 9.50348 26.5274 9.46906 26.7823 9.53825C27.0371 9.60744 27.2542 9.77462 27.3863 10.0033C27.5183 10.232 27.5545 10.5036 27.487 10.7589C27.4195 11.0142 27.2538 11.2324 27.026 11.366L24.786 12.658L26.554 13.132C26.6809 13.1661 26.7998 13.2249 26.9039 13.305C27.008 13.3851 27.0954 13.4849 27.1609 13.5988C27.2265 13.7126 27.269 13.8383 27.286 13.9685C27.303 14.0988 27.2941 14.2311 27.26 14.358C27.2259 14.4849 27.1671 14.6037 27.087 14.7079C27.0069 14.812 26.9071 14.8994 26.7932 14.9649C26.6794 15.0305 26.5537 15.073 26.4235 15.09C26.2932 15.107 26.1609 15.0981 26.034 15.064L22.338 14.074L19 16L22.338 17.926L26.036 16.936C26.1636 16.8996 26.2973 16.889 26.429 16.9048C26.5608 16.9206 26.6882 16.9624 26.8036 17.0279C26.9191 17.0934 27.0203 17.1812 27.1015 17.2862C27.1826 17.3913 27.2421 17.5114 27.2763 17.6396C27.3106 17.7679 27.3189 17.9017 27.301 18.0332C27.283 18.1647 27.239 18.2913 27.1716 18.4056C27.1042 18.5199 27.0147 18.6197 26.9083 18.6991C26.8019 18.7785 26.6808 18.8359 26.552 18.868L24.786 19.342L27.026 20.634C27.2538 20.7676 27.4195 20.9858 27.487 21.2411C27.5545 21.4964 27.5183 21.768 27.3863 21.9967C27.2542 22.2254 27.0371 22.3926 26.7823 22.4617C26.5274 22.5309 26.2556 22.4965 26.026 22.366L23.786 21.074L24.26 22.84C24.2964 22.9676 24.307 23.1013 24.2912 23.233C24.2755 23.3648 24.2336 23.4922 24.1681 23.6076C24.1026 23.7231 24.0148 23.8243 23.9098 23.9055C23.8047 23.9866 23.6846 24.0461 23.5564 24.0803C23.4281 24.1145 23.2944 24.1229 23.1628 24.1049C23.0313 24.087 22.9047 24.043 22.7904 23.9756C22.6761 23.9081 22.5763 23.8186 22.4969 23.7123C22.4175 23.6059 22.3601 23.4848 22.328 23.356L21.34 19.66L18 17.732V21.586L20.708 24.292C20.801 24.385 20.8747 24.4954 20.9251 24.6168C20.9754 24.7383 21.0013 24.8685 21.0013 25C21.0013 25.1315 20.9754 25.2617 20.9251 25.3832C20.8747 25.5046 20.801 25.615 20.708 25.708C20.615 25.801 20.5047 25.8747 20.3832 25.925C20.2617 25.9754 20.1315 26.0013 20 26.0013C19.8685 26.0013 19.7383 25.9754 19.6168 25.925C19.4954 25.8747 19.385 25.801 19.292 25.708L18 24.414V27C18 27.2652 17.8946 27.5196 17.7071 27.7071C17.5196 27.8946 17.2652 28 17 28C16.7348 28 16.4804 27.8946 16.2929 27.7071C16.1054 27.5196 16 27.2652 16 27V5C16 4.73478 16.1054 4.48043 16.2929 4.29289C16.4804 4.10536 16.7348 4 17 4Z"
+                        fill="url(#paint0_linear_3063_3053)"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_3063_3053"
+                          x1="0"
+                          y1="15.9995"
+                          x2="27.5203"
+                          y2="15.9995"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="var(--color-icon-therm-2)" />
+                          <stop
+                            offset="1"
+                            stop-color="var(--color-icon-therm-3)"
+                            stop-opacity="0.5"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div>
+                      350 000 ₽
+                      <p>на охлаждении</p>
+                    </div>
+                    <svg class="icon icon--arrow-right" width="12" height="24">
+                      <use href="./media/icons/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </a>
+                <a class="analytics__header-link" href="#">
+                  <div class="analytics__header-status-card">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M30.53 7.50002C30.386 7.41017 30.2216 7.35844 30.0521 7.34969C29.8826 7.34094 29.7137 7.37547 29.5613 7.45002C24.195 10.075 20.3625 8.84502 16.3113 7.54752C12.05 6.19127 7.65 4.78502 1.56125 7.75752C1.3931 7.83962 1.25135 7.96726 1.15213 8.12592C1.05292 8.28458 1.00021 8.46789 1 8.65502V23.6463C0.999976 23.8159 1.04312 23.9828 1.12538 24.1312C1.20764 24.2796 1.3263 24.4046 1.4702 24.4945C1.6141 24.5844 1.77851 24.6362 1.94794 24.6451C2.11738 24.6539 2.28628 24.6195 2.43875 24.545C7.805 21.92 11.6375 23.15 15.695 24.4475C18.1 25.2163 20.55 26 23.32 26C25.4562 26 27.7863 25.535 30.4338 24.2425C30.6019 24.1604 30.7437 24.0328 30.8429 23.8741C30.9421 23.7155 30.9948 23.5321 30.995 23.345V8.35377C30.9965 8.18366 30.9546 8.01598 30.8732 7.86659C30.7919 7.71719 30.6737 7.59103 30.53 7.50002ZM6 19C6 19.2652 5.89464 19.5196 5.70711 19.7071C5.51957 19.8947 5.26522 20 5 20C4.73478 20 4.48043 19.8947 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V11C4 10.7348 4.10536 10.4805 4.29289 10.2929C4.48043 10.1054 4.73478 10 5 10C5.26522 10 5.51957 10.1054 5.70711 10.2929C5.89464 10.4805 6 10.7348 6 11V19ZM16 20C15.2089 20 14.4355 19.7654 13.7777 19.3259C13.1199 18.8864 12.6072 18.2617 12.3045 17.5308C12.0017 16.7999 11.9225 15.9956 12.0769 15.2197C12.2312 14.4437 12.6122 13.731 13.1716 13.1716C13.731 12.6122 14.4437 12.2312 15.2196 12.0769C15.9956 11.9225 16.7998 12.0018 17.5307 12.3045C18.2616 12.6073 18.8864 13.1199 19.3259 13.7777C19.7654 14.4355 20 15.2089 20 16C20 17.0609 19.5786 18.0783 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20ZM28 21C28 21.2652 27.8946 21.5196 27.7071 21.7071C27.5196 21.8947 27.2652 22 27 22C26.7348 22 26.4804 21.8947 26.2929 21.7071C26.1054 21.5196 26 21.2652 26 21V13C26 12.7348 26.1054 12.4805 26.2929 12.2929C26.4804 12.1054 26.7348 12 27 12C27.2652 12 27.5196 12.1054 27.7071 12.2929C27.8946 12.4805 28 12.7348 28 13V21Z"
+                        fill="url(#paint0_linear_921_45209)"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_921_45209"
+                          x1="30.995"
+                          y1="15.9998"
+                          x2="1"
+                          y2="15.9998"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop
+                            stop-color="var(--color-icon-banknote-1)"
+                            stop-opacity="0.5"
+                          />
+                          <stop
+                            offset="1"
+                            stop-color="var(--color-icon-banknote-2)"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div>
+                      532 000 ₽
+                      <p>К получению</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="analytics__main">
+              <div class="analytics__main-meta">
+                <div class="analytics__main-title-block">
+                  <h2 class="analytics__main-title h2">
+                    Воронка выданных рассрочек
+                  </h2>
+                  <!--                  <input-->
+                  <!--                    type="text"-->
+                  <!--                    data-datepicker="dp-1"-->
+                  <!--                    data-mode="single"-->
+                  <!--                    id="dp-1"-->
+                  <!--                    name="dp-1"-->
+                  <!--                    data-months="1"-->
+                  <!--                    placeholder="Выберите дату"-->
+                  <!--                  />-->
+                  <div class="analytics__main-actions">
+                    <input type="date" style="max-width: 26px" />
+                    <button class="analytics__main-download" type="button">
+                      <svg class="icon icon--download" width="16" height="16">
+                        <use href="./media/icons/sprite.svg#download"></use>
+                      </svg>
+                      Выгрузить
+                    </button>
+                  </div>
+                </div>
+                <div class="analytics__main-mobile">
+                  <p class="analytics__main-subtitle">
+                    Средний чек
+                    <span>36 516</span>
+                    <span>,50 ₽</span>
+                  </p>
+                  <input type="date" style="max-width: 26px" />
+                </div>
+                <div class="analytics__main-mobile">
+                  <div class="analytics__approval-mobile">
+                    Конверсия в одобрение
+                    <p>76.9%</p>
+                  </div>
+                  <div class="analytics__issued-mobile">
+                    Конверсия в выдано рассрочек
+                    <p>47,4%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chart">
+                <div class="chart__container">
+                  <!-- ось Y -->
+                  <div class="chart__axis y-axis">
+                    <div class="y-label">100%</div>
+                    <div class="y-label">80%</div>
+                    <div class="y-label">60%</div>
+                    <div class="y-label">40%</div>
+                    <div class="y-label">20%</div>
+                    <div class="y-label">0%</div>
+                  </div>
+                  <!-- график -->
+                  <div class="chart__wrapper">
+                    <div class="chart__bars">
+                      <div class="conversion">
+                        <svg
+                          class="icon icon--arrow-left-bottom"
+                          width="43"
+                          height="45"
+                        >
+                          <use
+                            href="./media/icons/sprite.svg#arrow-left-bottom"
+                          ></use>
+                        </svg>
+                        <div class="conversion__content">
+                          <div class="conversion__value">76.9%</div>
+                          <div class="conversion__text">
+                            <p>Конверсия в одобрение</p>
+                          </div>
+                        </div>
+                        <svg
+                          class="icon icon--arrow-right-bottom"
+                          width="43"
+                          height="45"
+                        >
+                          <use
+                            href="./media/icons/sprite.svg#arrow-right-bottom"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <div
+                        class="chart__bar chart__bar--first"
+                        data-count="19"
+                        data-value="100"
+                      ></div>
+                      <div class="chart__shadow chart__shadow--first"></div>
+                      <div
+                        class="chart__bar chart__bar--second"
+                        data-count="15"
+                        data-value="78.9"
+                      ></div>
+                      <div class="chart__shadow chart__shadow--second"></div>
+                      <div
+                        class="chart__bar chart__bar--third"
+                        data-count="13"
+                        data-value="68.4"
+                      ></div>
+                      <div class="chart__shadow chart__shadow--third"></div>
+                      <div
+                        class="chart__bar chart__bar--fourth"
+                        data-count="10"
+                        data-value="52.6"
+                      ></div>
+                      <div class="chart__shadow chart__shadow--fourth"></div>
+                      <div
+                        class="chart__bar chart__bar--five"
+                        data-count="9"
+                        data-value="47.5"
+                      ></div>
+                    </div>
+                    <div class="chart__bg">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <!-- подписи под столбцами -->
+                  <div class="x-labels">
+                    <div>Оставил заявку</div>
+                    <div>Выбрали оплату</div>
+                    <div>Отправили на рассмотрение</div>
+                    <div>Получили одобрение</div>
+                    <div>Подписали договор</div>
+                  </div>
+                </div>
+                <div class="chart__statistic">
+                  <svg class="icon icon--arrow-top" width="12" height="50">
+                    <use href="./media/icons/sprite.svg#arrow-top"></use>
+                  </svg>
+                  <div class="chart__statistic-text">
+                    <span class="chart__statistic-procent">47.4%</span>
+                    <p class="chart__statistic-clarification">
+                      Конверсия в выдано рассрочек
+                    </p>
+                  </div>
+                  <svg class="icon icon--arrow-bottom" width="12" height="50">
+                    <use href="./media/icons/sprite.svg#arrow-top"></use>
+                  </svg>
+                </div>
+              </div>
+              <!-- Мини-график под основным -->
+              <div class="chart-mobile">
+                <div class="chart-mobile__container">
+                  <!-- кол-во заявок слева -->
+                  <div class="chart-mobile__counts">
+                    <div class="chart-mobile__count chart-mobile__count--first">
+                      Оставили заявку
+                      <p>19 шт</p>
+                    </div>
+                    <div class="chart-mobile__count chart-mobile__count--second">
+                      Выбрали способ оплаты
+                      <p>15 шт</p>
+                    </div>
+                    <div class="chart-mobile__count chart-mobile__count--third">
+                      Отправили на рассмотрение
+                      <p>13 шт</p>
+                    </div>
+                    <div class="chart-mobile__count chart-mobile__count--fourth">
+                      Получили одобрение
+                      <p>10 шт</p>
+                    </div>
+                    <div class="chart-mobile__count chart-mobile__count--five">
+                      Подписали договор
+                      <p>9 шт</p>
+                    </div>
+                  </div>
+
+                  <!-- сам график -->
+                  <div class="chart-mobile__wrapper">
+                    <div class="chart-mobile__bars">
+                      <div
+                        class="chart-mobile__bar chart-mobile__bar--first"
+                        data-value="100"
+                      ></div>
+                      <div
+                        class="chart-mobile__shadow chart-mobile__shadow--first"
+                      ></div>
+                      <div
+                        class="chart-mobile__bar chart-mobile__bar--second"
+                        data-value="78.9"
+                      ></div>
+                      <div
+                        class="chart-mobile__shadow chart-mobile__shadow--second"
+                      ></div>
+                      <div
+                        class="chart-mobile__bar chart-mobile__bar--third"
+                        data-value="68.4"
+                      ></div>
+                      <div
+                        class="chart-mobile__shadow chart-mobile__shadow--third"
+                      ></div>
+                      <div
+                        class="chart-mobile__bar chart-mobile__bar--fourth"
+                        data-value="52.6"
+                      ></div>
+                      <div
+                        class="chart-mobile__shadow chart-mobile__shadow--fourth"
+                      ></div>
+                      <div
+                        class="chart-mobile__bar chart-mobile__bar--five"
+                        data-value="47.5"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="analytics__body">
+            <div class="analytics__body-title-block">
+              <h3 class="analytics__body-title h2">Сделки по этапам воронки</h3>
+              <div class="analytics__input input" data-js-search>
+                <input
+                  class="input__field"
+                  type="text"
+                  placeholder="Поиск по ФИО, телефону или почте"
+                  data-js-search-input
+                />
+                <button
+                  class="input__icon is-search"
+                  type="button"
+                  data-js-search-icon
+                >
+                  <svg class="icon icon--search" width="16" height="16">
+                    <use href="./media/icons/sprite.svg#search"></use>
+                  </svg>
+                  <svg class="icon icon--cross" width="16" height="16">
+                    <use href="./media/icons/sprite.svg#cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="analytics__body-grid">
+              <div class="analytics__body-col funnel-col">
+                <div class="funnel-col__header">
+                  <h4 class="funnel-col__title funnel-col__title--request h4">
+                    Оставили заявку
+                  </h4>
+                  <div class="funnel-col__meta">
+                    <p>19 сделок: 2 850 000 ₽</p>
+                  </div>
+                </div>
+                <div class="funnel-col__body">
+                  <button class="funnel-col__add-bid-button" type="button">
+                    <svg class="icon icon--plus" width="14" height="14">
+                      <use href="./media/icons/sprite.svg#plus"></use>
+                    </svg>
+                    <span> Добавить </span>
+                  </button>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--sber">
+                        Сбербанк
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Слава</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--kviku">
+                        Kviku
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Слава</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--mtc">
+                        МТС Банк
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Слава</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--sber">
+                        Сбербанк
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Слава</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--sber">
+                        Сбербанк
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Слава</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="analytics__body-col funnel-col">
+                <div class="funnel-col__header">
+                  <h4 class="funnel-col__title funnel-col__title--methods h4">
+                    Выбрали способ оплаты
+                  </h4>
+                  <div class="funnel-col__meta">
+                    <p>15 сделок: 2 250 000 ₽</p>
+                  </div>
+                </div>
+                <div class="funnel-col__body">
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--otp">
+                        Otp
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Александра</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--otp">
+                        Otp
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Александра</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--otp">
+                        Otp
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Александра</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--otp">
+                        Otp
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Александра</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--otp">
+                        Otp
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Александра</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="analytics__body-col funnel-col">
+                <div class="funnel-col__header">
+                  <h4
+                    class="funnel-col__title funnel-col__title--under-consideration h4"
+                  >
+                    Отправили на рассмотрение
+                  </h4>
+                  <div class="funnel-col__meta">
+                    <p>13 сделок: 1 950 000 ₽</p>
+                  </div>
+                </div>
+                <div class="funnel-col__body">
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span
+                        class="client-card__bank client-card__bank--sovcom-express"
+                      >
+                        Совком Экспресс
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Ильхом</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="analytics__body-col funnel-col">
+                <div class="funnel-col__header">
+                  <h4 class="funnel-col__title funnel-col__title--approval h4">
+                    Получили одобрение
+                  </h4>
+                  <div class="funnel-col__meta">
+                    <p>10 сделок: 1 500 000 ₽</p>
+                  </div>
+                </div>
+                <div class="funnel-col__body">
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--sber">
+                        Сбербанк
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Слава</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--otp">
+                        Otp
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Александра</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="analytics__body-col funnel-col">
+                <div class="funnel-col__header">
+                  <h4 class="funnel-col__title funnel-col__title--signed h4">
+                    Подписали
+                  </h4>
+                  <div class="funnel-col__meta">
+                    <p>9 сделок: 1 350 000 ₽</p>
+                  </div>
+                </div>
+                <div class="funnel-col__body">
+                  <div class="funnel-col__card client-card">
+                    <div class="client-card__meta-info">
+                      <span class="client-card__bank client-card__bank--sber">
+                        Сбербанк
+                      </span>
+                      <time class="client-card__date" datetime="2025-09-22">
+                        <span> 22.09.2025 </span>
+                      </time>
+                    </div>
+                    <div class="client-card__main-info">
+                      <span class="client-card__name">Слава</span>
+                      <span class="client-card__phone">+7 900 123-00-11</span>
+                      <span class="client-card__amount">150 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

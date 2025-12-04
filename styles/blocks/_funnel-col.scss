@@ -1,0 +1,87 @@
+@use '../helpers' as *;
+
+.funnel-col {
+  border-radius: var(--rounded-l);
+  background-color: var(--color-funnel-col);
+  padding: 6px;
+  min-width: 240px;
+  height: max-content;
+
+  &__header {
+    display: flex;
+    row-gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px 12px;
+    min-height: 93px;
+  }
+
+  &__body {
+    display: flex;
+    row-gap: 4px;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+
+    &--request {
+      color: var(--color-title-request);
+    }
+
+    &--methods {
+      color: var(--color-title-method);
+    }
+
+    &--under-consideration {
+      color: var(--color-title-under-consideration);
+    }
+
+    &--approval {
+      color: transparent;
+      background: var(--color-title-approval);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &--signed {
+      color: var(--color-title-signed);
+    }
+  }
+
+  &__meta {
+    border-radius: 150px;
+    background-color: var(--color-white);
+    padding: 3px 9px;
+    width: max-content;
+    font-size: 12px;
+    line-height: 1.3;
+
+    p {
+      display: inline-block;
+    }
+  }
+
+  &__add-bid-button {
+    display: flex;
+    column-gap: 9px;
+    align-items: center;
+    box-shadow: var(--box-shadow-base);
+    border: none;
+    border-radius: var(--rounded-l);
+    background: var(--color-add-bid);
+    padding-inline: 12px;
+    padding-block: 0;
+    width: 100%;
+    height: 48px;
+    color: var(--color-add-button);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+}

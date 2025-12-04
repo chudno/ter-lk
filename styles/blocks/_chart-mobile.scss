@@ -1,0 +1,144 @@
+@use '../helpers' as *;
+
+.chart-mobile {
+  @include tablet-above {
+    display: none;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 121px 1fr;
+    align-items: center;
+    gap: 11px;
+    margin-top: 24px;
+  }
+
+  &__counts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+    color: var(--color-graphic-procent);
+    font-size: 12px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: var(--mini-bar-height);
+      font-size: 12px;
+      line-height: 1.2;
+
+      p {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__count {
+    &--first {
+      color: var(--color-bar-first);
+    }
+
+    &--second {
+      color: var(--color-bar-mobile-text-second);
+    }
+
+    &--third {
+      color: var(--color-bar-third);
+    }
+
+    &--fourth {
+      color: transparent;
+      background: var(--color-bar-fourth-mobile);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &--five {
+      color: var(--color-bar-five);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    border-left: 1px solid #000000;
+    padding-block: var(--mini-bars-padding-Y);
+    height: 440px;
+  }
+
+  &__bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__bar {
+    position: relative;
+    flex: none;
+    transition: width 0.8s ease;
+    border-radius: 1px;
+    width: 0;
+    height: var(--mini-bar-height);
+
+    &--first {
+      background: var(--color-bar-first);
+    }
+
+    &--second {
+      background: var(--color-bar-second);
+    }
+
+    &--third {
+      background: var(--color-bar-third);
+    }
+
+    &--fourth {
+      background: var(--color-bar-fourth-mobile);
+    }
+
+    &--five {
+      background: var(--color-bar-five);
+    }
+
+    &:nth-last-child(-n + 3) span {
+      color: var(--color-chart-procent-bar-mobile);
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      color: var(--color-chart-procent-bar-mobile-alt);
+      font-weight: bold;
+      font-size: 11px;
+    }
+  }
+
+  &__shadow {
+    transition: width 0.8s ease;
+    width: 100%;
+    height: 100%;
+
+    &--first {
+      background: var(--color-bar-first-shadow);
+    }
+
+    &--second {
+      background: var(--color-bar-second-shadow);
+    }
+
+    &--third {
+      background: var(--color-bar-third-shadow);
+    }
+
+    &--fourth {
+      background: var(--color-bar-fourth-shadow);
+    }
+  }
+}

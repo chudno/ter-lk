@@ -1,0 +1,89 @@
+@use '../helpers' as *;
+
+.burger-dialog {
+  display: contents;
+  position: absolute;
+  transition-behavior: allow-discrete;
+  transition-duration: var(--transition-duration);
+  margin: 0;
+  inset: 0;
+  padding: 0;
+  height: 100%;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+
+  @mixin starting-styles {
+    translate: 50%;
+    opacity: 0;
+  }
+
+  &[open] {
+    display: block;
+    opacity: 1;
+
+    .burger-dialog__inner {
+      right: 0;
+
+      @starting-style {
+        @include starting-styles;
+      }
+    }
+  }
+
+  &::backdrop {
+    opacity: 0.45;
+    background: var(--color-black);
+  }
+
+  &__inner {
+    display: contents;
+    position: fixed;
+    right: -50%;
+    flex-direction: column-reverse;
+    justify-content: start;
+    z-index: 99;
+    transition-behavior: allow-discrete;
+    transition-duration: var(--transition-duration);
+    background: var(--color-bg-dialog);
+    padding-top: 38px;
+    width: 100%;
+    max-width: 296px;
+    height: 100%;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__close {
+    @include flex-center;
+    @include reset-button;
+
+    @include tablet-above {
+      display: none;
+    }
+  }
+
+  &__exit-button {
+    margin-inline: 15px;
+    margin-top: auto;
+    margin-bottom: 25px;
+    border: 1px solid var(--color-border-exit-button);
+    border-radius: var(--rounded-s);
+    background: transparent;
+    max-width: 90px;
+    height: 45px;
+    color: var(--color-exit-button);
+    font-size: 14px;
+    line-height: 1.5;
+
+    @include flex-center(true);
+
+    @include tablet-above {
+      display: none;
+    }
+  }
+}

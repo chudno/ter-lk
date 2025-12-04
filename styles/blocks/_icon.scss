@@ -1,0 +1,62 @@
+@use '../helpers' as *;
+
+.icon {
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  object-fit: contain;
+
+  @include tablet {
+    height: auto;
+  }
+
+  &[fill] {
+    fill: currentColor;
+  }
+
+  &--return {
+    @include tablet-above {
+      margin-top: 10px;
+    }
+  }
+
+  &--bell {
+    height: auto;
+  }
+
+  &--arrow-right {
+    height: auto;
+    color: var(--color-gray-60);
+  }
+
+  &--plus {
+    height: auto;
+  }
+
+  &--copy {
+    height: auto;
+  }
+
+  &--search {
+    color: var(--color-icon-search);
+  }
+
+  &--cross {
+    color: var(--color-icon-cross);
+  }
+
+  &--arrow-top {
+    height: auto;
+  }
+
+  &--arrow-bottom {
+    rotate: 180deg;
+    height: auto;
+  }
+
+  &--download {
+    height: auto;
+  }
+}

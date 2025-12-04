@@ -1,0 +1,132 @@
+@use '../helpers' as *;
+
+.client-card {
+  display: flex;
+  row-gap: 8px;
+  flex-direction: column;
+  box-shadow: var(--box-shadow-base);
+  border-radius: var(--rounded-l);
+  background: var(--color-add-bid);
+  padding: 12px 10px;
+
+  &__meta-info {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bank {
+    border-radius: 150px;
+    padding-inline: 9px;
+    height: 22px;
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.3;
+
+    @include flex-center(true);
+
+    &--sber {
+      background-color: var(--color-label-sber);
+      color: var(--color-label-sber-text);
+    }
+
+    &--otp {
+      background-color: var(--color-label-otp);
+      color: var(--color-label-otp-text);
+    }
+
+    &--credit-europa {
+      background-color: var(--color-label-credit-europa);
+      color: var(--color-label-credit-europa-text);
+    }
+
+    &--tbank {
+      background-color: var(--color-label-tbank);
+      color: var(--color-label-tbank-text);
+    }
+
+    &--sovcom-express {
+      background-color: var(--color-label-sovcom-express);
+      color: var(--color-label-sovcom-express-text);
+    }
+
+    &--mig {
+      background-color: var(--color-label-mig);
+      color: var(--color-label-mig-text);
+    }
+
+    &--mtc {
+      background-color: var(--color-label-mtc);
+      color: var(--color-label-mtc-text);
+    }
+
+    &--alfa {
+      background-color: var(--color-label-alfa);
+      color: var(--color-label-alfa-text);
+    }
+
+    &--loco {
+      background-color: var(--color-label-loco);
+      color: var(--color-label-loco-text);
+    }
+
+    &--kviku {
+      background-color: var(--color-label-kviku);
+      color: var(--color-label-kviku-text);
+    }
+
+    &--home-express {
+      background-color: var(--color-label-home-express);
+      color: var(--color-label-home-express-text);
+    }
+
+    &--sovcom-bank {
+      background-color: var(--color-label-sovcom-bank);
+      color: var(--color-label-sovcom-bank-text);
+    }
+
+    &--paylate {
+      background-color: var(--color-label-paylate);
+      color: var(--color-label-paylate-text);
+    }
+  }
+
+  &__date {
+    opacity: 0.6;
+    color: var(--color-date);
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  &__main-info {
+    display: flex;
+    row-gap: 2px;
+    flex-direction: column;
+  }
+
+  &__name {
+    color: var(--color-client-name);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+
+    &[data-theme='dark'] {
+      opacity: 0.1;
+    }
+  }
+
+  &__phone {
+    opacity: 0.65;
+    color: var(--color-client-mobile);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__amount {
+    color: var(--color-client-amount);
+    font-size: 13px;
+    line-height: 1.3;
+  }
+}
