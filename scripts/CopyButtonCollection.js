@@ -33,10 +33,6 @@ class CopyButton extends BaseComponent {
   }
 
   showTooltip(message) {
-    if (this.tooltip) {
-      return;
-    }
-
     this.tooltip = document.createElement("span");
     this.tooltip.className = "copy-tooltip";
     this.tooltip.textContent = message;
@@ -67,12 +63,10 @@ class CopyButton extends BaseComponent {
       this.tooltip.style.opacity = "1";
     });
 
-    this.tooltipTimeout = setTimeout(() => {
-      if (this.tooltip) {
-        this.tooltip.style.opacity = "0";
-        setTimeout(() => this.tooltip?.remove(), 300);
-        this.tooltip = null;
-      }
+    setTimeout(() => {
+      this.tooltip.style.opacity = "0";
+      this.tooltip.classList.remove("show");
+      setTimeout(() => this.tooltip.remove(), 300);
     }, 1500);
   }
 

@@ -5,7 +5,7 @@ import OverlayMenu from "./OverlayMenu.js";
 import DatepickerCollection from "./DatepickerCollection.js";
 import CopyButtonCollection from "./CopyButtonCollection.js";
 import ThemeManager from "./ThemeManager.js";
-import timer from "./CountdownCollection.js"
+import CountdownCollection from "./CountdownCollection.js";
 
 new TabsCollection();
 new SearchInput();
@@ -14,4 +14,4 @@ new OverlayMenu();
 new DatepickerCollection();
 new CopyButtonCollection();
 new ThemeManager();
-timer();
+new CountdownCollection();

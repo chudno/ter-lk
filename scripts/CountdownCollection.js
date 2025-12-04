@@ -1,61 +1,92 @@
-function timer() {
-  document.querySelectorAll("[data-js-countdown]").forEach((copyBlock) => {
-    const progressBarFill = copyBlock.querySelector(
+// Countdown.js
+const MONTHS = [
+  "янв",
+  "фев",
+  "мар",
+  "апр",
+  "май",
+  "июн",
+  "июл",
+  "авг",
+  "сен",
+  "окт",
+  "ноя",
+  "дек",
+];
+
+class Countdown {
+  constructor(root) {
+    this.root = root;
+
+    this.progressBarFill = root.querySelector(
       "[data-js-countdown-progress-item]",
     );
-    const progressContainer = copyBlock.querySelector(
-      "[data-js-countdown-progress]",
-    );
-    const timeRemainingEl = copyBlock.querySelector(
-      "[data-js-countdown-start-text]",
-    );
-    const timeEndEl = copyBlock.querySelector("[data-js-countdown-end-text]");
+    this.progressContainer = root.querySelector("[data-js-countdown-progress]");
+    this.timeRemainingEl = root.querySelector("[data-js-countdown-start-text]");
+    this.timeEndEl = root.querySelector("[data-js-countdown-end-text]");
 
-    const startDate = new Date(progressContainer.dataset.startDate);
-    const endDate = new Date(progressContainer.dataset.endDate);
+    this.startDate = new Date(this.progressContainer.dataset.startDate);
+    this.endDate = new Date(this.progressContainer.dataset.endDate);
 
-    const totalSeconds = Math.floor((endDate - startDate) / 1000);
+    this.totalSeconds = Math.floor((this.endDate - this.startDate) / 1000);
 
-    // Отобразим дату окончания
-    const endDay = String(endDate.getDate()).padStart(2, "0");
-    const endMonth = String(endDate.getMonth() + 1).padStart(2, "0");
-    const endHours = String(endDate.getHours()).padStart(2, "0");
-    const endMinutes = String(endDate.getMinutes()).padStart(2, "0");
-    timeEndEl.textContent = `дата окончания: ${endDay}.${endMonth} ${endHours}:${endMinutes}`;
+    this.renderEndDate();
+    this.update();
+    this.timer = setInterval(() => this.update(), 1000);
+  }
 
-    function updateTimer() {
-      const now = new Date();
+  renderEndDate() {
+    const d = this.endDate;
 
-      // Проверяем, началась ли сессия
-      if (now < startDate) {
-        timeRemainingEl.textContent = "Сессия не началась";
-        progressBarFill.style.width = "100%"; // пока полная, можно даже 0%, если хочешь
-        return;
-      }
+    const day = d.getDate();
+    const month = MONTHS[d.getMonth()];
+    const hours = String(d.getHours()).padStart(2, "0");
+    const minutes = String(d.getMinutes()).padStart(2, "0");
 
-      let remainingSeconds = Math.floor((endDate - now) / 1000);
+    this.timeEndEl.textContent = `дата окончания: ${day} ${month}. ${hours}:${minutes}`;
+  }
 
-      if (remainingSeconds <= 0) {
-        remainingSeconds = 0;
-        timeRemainingEl.textContent = "Завершено";
-        progressBarFill.style.width = "0%";
-        return;
-      }
+  update() {
+    const now = new Date();
 
-      const hours = Math.floor(remainingSeconds / 3600);
-      const minutes = Math.floor((remainingSeconds % 3600) / 60);
-
-      timeRemainingEl.textContent = `${hours}ч ${minutes}мин`;
-
-      // Обратный прогресс: от 100% (старт) к 0% (конец)
-      const elapsedSeconds = Math.floor((now - startDate) / 1000);
-      const progressPercent = 100 - (elapsedSeconds / totalSeconds) * 100;
-      progressBarFill.style.width = progressPercent + "%";
+    // Сессия не началась
+    if (now < this.startDate) {
+      this.timeRemainingEl.textContent = "Сессия не началась";
+      this.progressBarFill.style.width = "100%";
+      return;
     }
 
-    updateTimer();
-    setInterval(updateTimer, 1000);
-  });
+    let remainingSeconds = Math.floor((this.endDate - now) / 1000);
+
+    // Завершена
+    if (remainingSeconds <= 0) {
+      this.timeRemainingEl.textContent = "Завершено";
+      this.progressBarFill.style.width = "0%";
+      clearInterval(this.timer);
+      return;
+    }
+
+    const hours = Math.floor(remainingSeconds / 3600);
+    const minutes = Math.floor((remainingSeconds % 3600) / 60);
+    this.timeRemainingEl.textContent = `${hours}ч ${minutes}мин`;
+
+    // Прогресс 100 → 0
+    const elapsedSeconds = Math.floor((now - this.startDate) / 1000);
+    const progressPercent = 100 - (elapsedSeconds / this.totalSeconds) * 100;
+
+    this.progressBarFill.style.width = `${progressPercent}%`;
+  }
 }
 
-export default timer;
+export default class CountdownCollection {
+  constructor() {
+    this.selector = "[data-js-countdown]";
+    this.init();
+  }
+
+  init() {
+    document.querySelectorAll(this.selector).forEach((el) => {
+      new Countdown(el);
+    });
+  }
+}
