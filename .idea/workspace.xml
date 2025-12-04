@@ -5,13 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="256457db-01be-4340-9074-746b85b3a83e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/icons/calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_datepicker.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/air-datepicker/air-datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/air-datepicker/air-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/air-datepicker/air-datepicker.ru.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cooling.html" beforeDir="false" afterPath="$PROJECT_DIR$/cooling.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/CopyButtonCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/CopyButtonCollection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/CountdownCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/CountdownCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/icons/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/media/icons/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/dist/flexidatepicker.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/dist/flexidatepicker.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/dist/flexidatepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/dist/flexidatepicker.umd.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/dist/flexidatepicker.umd.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/dist/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flexidatepicker/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/DatepickerCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/DatepickerCollection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_analytics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_analytics.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_deal-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_deal-card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_icon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/flexi-datepicker/flexidatepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/flexi-datepicker/flexidatepicker.umd.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +48,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="363uZcVJsceN9TIDZp5wKktKItX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,7 +72,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/husltime/Desktop/Projects/Work/terpay/vendor/flexi-datepicker",
+    "last_opened_file_path": "/Users/husltime/Desktop/Projects/Work/terpay/vendor/air-datepicker",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,6 +87,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/air-datepicker" />
       <recent name="$PROJECT_DIR$/vendor/flexi-datepicker" />
       <recent name="$PROJECT_DIR$/styles" />
     </key>
@@ -101,7 +137,7 @@
       <workItem from="1764604215623" duration="19227000" />
       <workItem from="1764669845804" duration="31722000" />
       <workItem from="1764749741017" duration="48650000" />
-      <workItem from="1764832789425" duration="10249000" />
+      <workItem from="1764832789425" duration="22815000" />
     </task>
     <servers />
   </component>

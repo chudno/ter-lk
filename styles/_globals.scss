@@ -54,7 +54,11 @@ h1,
 
 h2,
 .h2 {
-  color: var(--color-title-additional);
+  background: var(--color-title-additional);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   font-size: fluid(24, 20);
   line-height: 1.3;

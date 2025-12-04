@@ -8,6 +8,6 @@
     "watch": "sass --watch ."
   },
   "dependencies": {
-    "flexidatepicker": "^1.1.5"
+    "air-datepicker": "^3.6.0"
   }
 }

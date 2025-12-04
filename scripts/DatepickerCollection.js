@@ -1,38 +1,59 @@
-class DatepickerAuto {
+class DatepickerManager {
+  constructor(selector = "[data-js-datepicker]") {
+    this.selector = selector;
+    this.instances = [];
+  }
+
   init() {
-    const items = document.querySelectorAll("[data-datepicker]");
+    const elements = document.querySelectorAll(this.selector);
+    if (!elements.length) return;
 
-    items.forEach((el, index) => {
-      // чтобы не инициализировать дважды
-      if (el.dataset.dpInitialized) return;
+    elements.forEach((el) => {
+      const options = this.getOptionsFromDataset(el.dataset);
 
-      // Получаем параметры
-      const mode = el.dataset.mode || "single";
-      const months = Number(el.dataset.months) || 1;
+      const isMobileMode = window.innerWidth < 1024;
 
-      // Генерируем уникальный id, если его нет
-      if (!el.id) {
-        el.id = `dp-${index + 1}`;
-      }
+      const instance = new AirDatepicker(el, {
+        ...options,
+        range: true,                // включаем возможность выбирать диапазон
+        multipleDates: false,       // но не даём выбирать 3+ дат
+        autoClose: true,
+        locale: AirDatepickerLocales.ru,
+        isMobile: isMobileMode,
 
-      // Инициализация FlexiDatepicker через селектор
-      new FlexiDatepicker(`#${el.id}`, {
-        mode,
-        monthsToShow: months,
-        locale: "ru",
+        onSelect({ date, formattedDate }) {
+          // Если только одна дата — date.length === 1
+          // Если диапазон — date.length === 2
+          console.log("Выбор:", date);
+        },
       });
 
-      el.dataset.dpInitialized = "true";
+      this.instances.push(instance);
     });
+  }
+
+  getOptionsFromDataset(dataset) {
+    const options = {};
+
+    for (const [key, value] of Object.entries(dataset)) {
+      if (value === "true") options[key] = true;
+      else if (value === "false") options[key] = false;
+      else options[key] = value;
+    }
+
+    return options;
   }
 }
 
 class DatepickerCollection {
   constructor() {
-    // инициализация после DOMContentLoaded
+    this.init();
+  }
+
+  init() {
     document.addEventListener("DOMContentLoaded", () => {
-      this.datepicker = new DatepickerAuto();
-      this.datepicker.init();
+      const datepicker = new DatepickerManager();
+      datepicker.init();
     });
   }
 }

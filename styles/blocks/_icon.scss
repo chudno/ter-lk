@@ -27,8 +27,9 @@
   }
 
   &--arrow-right {
+    opacity: var(--color-arrow-right-opacity);
     height: auto;
-    color: var(--color-gray-60);
+    color: var(--color-arrow-right);
   }
 
   &--plus {

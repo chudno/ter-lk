@@ -8,7 +8,10 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="./vendor/air-datepicker/air-datepicker.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./vendor/air-datepicker/air-datepicker.js" defer></script>
+    <script src="vendor/air-datepicker/air-datepicker.ru.js" defer></script>
     <script src="./scripts/main.js" type="module"></script>
   </head>
   <body>
@@ -265,6 +268,19 @@
                   </svg>
                 </button>
               </div>
+              <div class="analytics__main-datepicker datepicker">
+                <label class="datepicker__label">
+                  <svg class="icon icon--calendar" width="24" height="24">
+                    <use href="./media/icons/sprite.svg#calendar"></use>
+                  </svg>
+                  <input
+                    class="datepicker__field"
+                    data-js-datepicker
+                    type="text"
+                    placeholder="день"
+                  />
+                </label>
+              </div>
             </div>
             <div
               class="cooling__main-body is-active"
@@ -441,8 +457,12 @@
                 <div class="deal-card__info">
                   <p class="deal-card__name">Иванов Алексей Андреевич</p>
                   <div class="deal-card__details">
-                    <span>+7 900 211-30-11</span>
-                    <span>aalex@gmail.com</span>
+                    <button class="deal-card__details-copy-button" data-js-copy>
+                      +7 900 211-30-11
+                    </button>
+                    <button class="deal-card__details-copy-button" data-js-copy>
+                      aalex@gmail.com
+                    </button>
                     <span>Одобрено 22 окт в 08:25</span>
                     <span>250 000 ₽</span>
                   </div>
@@ -497,8 +517,12 @@
                 <div class="deal-card__info">
                   <p class="deal-card__name">Владислав</p>
                   <div class="deal-card__details">
-                    <span>+7 963 125-28-10</span>
-                    <span>vladd@gmail.com</span>
+                    <button class="deal-card__details-copy-button" data-js-copy>
+                      +7 963 125-28-10
+                    </button>
+                    <button class="deal-card__details-copy-button" data-js-copy>
+                      vladd@gmail.com
+                    </button>
                     <span>Одобрено 22 окт в 08:25</span>
                     <span>1 250 000 ₽</span>
                   </div>

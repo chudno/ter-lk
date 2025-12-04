@@ -46,6 +46,7 @@
     width: 100%;
     font-size: 14px;
     line-height: 1.2;
+    color: var(--color-input-field);
 
     &:focus {
       transition-duration: var(--transition-duration);

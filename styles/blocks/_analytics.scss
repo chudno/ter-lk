@@ -47,7 +47,7 @@
       border-radius: var(--rounded-xl);
       background: var(--color-status-card);
       padding: 10px 16px;
-      width: 100%;
+      width: auto;
 
       @include tablet-above {
         width: 170px;
@@ -143,11 +143,12 @@
       display: flex;
       column-gap: 20px;
       justify-content: space-between;
+      align-items: center;
 
       @include tablet-above {
         display: contents;
 
-        input {
+        .datepicker {
           display: none;
         }
       }

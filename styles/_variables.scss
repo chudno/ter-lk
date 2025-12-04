@@ -87,6 +87,7 @@
 
   --color-input-bg: transparent;
   --color-input-focus: #737373;
+  --color-input-field: #000;
 
   --color-graphic-procent: #060606;
   --opacity-graphic-procent: 0.5;
@@ -126,7 +127,7 @@
   --color-bar-fourth: #eac221;
   --color-bar-fourth-mobile: #eac221;
   --color-bar-five: #ffdd2d;
-  --color-bar-mobile-text-second: #060606;
+  н: #060606;
 
   --color-bar-first-shadow: linear-gradient(180deg, rgba(33, 34, 31, 0.12) 0%, rgba(33, 34, 31, 0.02) 100%);
   --color-bar-second-shadow: linear-gradient(180deg, rgba(128, 128, 128, 0.12) 0%, rgba(128, 128, 128, 0.02) 100%);
@@ -165,6 +166,20 @@
   --color-progress-text: #334155;
 
   --color-main-title: #060606;
+
+  --color-datepicker-icon: #64748b;
+  --color-datepicker-border: #d7dee9;
+  --color-datepicker-text: rgba(15, 23, 42, 0.7);
+  --color-datepicker-bg: #fff;
+  --сolor-datepicker-date-active: #060606;
+  --color-datepicker-year: rgb(74, 74, 74);
+  --color-datepicker-selected: var(--color-accent);
+  --color-datepicker-selected-opacity: rgba(242, 255, 84, 0.1);
+  --color-datepicker-date-actual: #a1a5a3;
+
+  --color-arrow-right: var(--color-gray-60);
+  --color-arrow-right-opacity: 0.3;
+
 
   --color-white: #ffffff;
   --color-black: #000000;
@@ -369,6 +384,7 @@
     --color-text-additional-status-card: #f7f7f7;
 
     --color-input-border: #353535;
+    --color-input-field: #f7f7f7;
 
     --color-add-bid: linear-gradient(180deg, #1c1d19 0%, #262626 100%);
 
@@ -387,5 +403,19 @@
     --color-bar-mobile-text-second: #fff;
 
     --color-main-title: #fff;
+
+    --color-datepicker-icon: #5c5c57;
+    --color-datepicker-border: #353535;
+    --color-datepicker-text: #f7f7f7;
+    --color-datepicker-bg: linear-gradient(180deg, #1c1d19 0%, #262626 100%);
+    --сolor-datepicker-date-active: #fff;
+    --color-datepicker-year: #fff;
+    --color-datepicker-selected: #675def;
+    --color-datepicker-selected-opacity: rgba(103, 93, 239, 0.1);
+    --color-datepicker-date-actual: #d6d3ff;
+    --color-title-additional: linear-gradient(90deg, #f2ff54 0%, #fffffc 100%);
+
+    --color-arrow-right: var(--color-accent);
+    --color-arrow-right-opacity: 1;
   }
 }
